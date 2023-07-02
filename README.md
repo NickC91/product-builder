@@ -12,7 +12,7 @@ Piccolo configuratore per auto che permette all'utente di scegliere modello, col
 
 HTML, CSS, Javascript, React
 
-Applicazione raggiungibile qui:  <a href="https://fantastic-froyo-2c62db.netlify.app/">Netlify</a>
+Applicazione raggiungibile qui:  <a href="https://glittery-salamander-bdf699.netlify.app/">Netlify</a>
 
 ## Extra
 
