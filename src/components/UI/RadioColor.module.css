@@ -1,0 +1,115 @@
+.customizer {
+  text-align: center;
+}
+
+.customizer li {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.customizer li:last-of-type {
+  margin-right: 0;
+}
+
+.customizer a .disabled {
+  display: none;
+}
+
+.customizer a {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #ededed;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+[data-color=white] {
+  background-color: #fff;
+}
+
+[data-color=grey] {
+  background-color: #303539;
+}
+
+[data-color=orange] {
+  background-color: #cf5a16;
+}
+
+[data-color=metallic] {
+  background-color: #303539;
+}
+
+[data-color=perl] {
+  background-color: #d1d1d1;
+}
+
+.customizer li::before {
+  content: '';
+  bottom: 100%;
+  height: 0;
+  border: 8px solid transparent;
+  border-top-color: rgba(237, 237, 237, .8);
+  border-top-width: 10px;
+}
+
+.customizer li::after,
+.customizer li::before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-5px);
+  -ms-transform: translateX(-50%) translateY(-5px);
+  transform: translateX(-50%) translateY(-5px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .2s, visibility .2s, -webkit-transform .2s;
+  transition: opacity .2s, visibility .2s, -webkit-transform .2s;
+  transition: opacity .2s, visibility .2s, transform .2s;
+  transition: opacity .2s, visibility .2s, transform .2s, -webkit-transform .2s;
+}
+
+.customizer li::after {
+  content: attr(data-content);
+  background-color: rgba(237, 237, 237, .8);
+  white-space: nowrap;
+  padding: 0.7em 1.1em;
+  border-radius: 2em;
+  bottom: calc(100% + 18px);
+}
+
+.customizer li:hover::after,
+.customizer li:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.customizer .selected a {
+  box-shadow: 0 0 0 2px #ffb500;
+}
+
+@media only screen and (min-width: 1024px) {
+  .customizer {
+    margin: 2em 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .customizer li {
+    margin-right: 1em;
+  }
+
+  .customizer a {
+    height: 50px;
+    width: 50px;
+  }
+}

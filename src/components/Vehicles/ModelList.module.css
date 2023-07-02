@@ -1,0 +1,56 @@
+.models-list {
+  text-align: center;
+}
+
+.options-list>li {
+  border: 2px solid #ededed;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-transition: border-color .3s;
+  transition: border-color .3s;
+}
+
+.models-list>li {
+  padding: 2.7em 0;
+}
+
+.models-list .name {
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-top: 0.2em;
+}
+
+.models-list img {
+  display: block;
+  max-width: 80%;
+  margin: 1.8em auto 2.2em;
+}
+
+.models-list .price {
+  display: block;
+  color: #5d7c89;
+  margin-bottom: 1em;
+}
+
+.options-list>li.selected {
+  border-color: #ffb500;
+}
+
+.loaded {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .options-list>li {
+    margin-bottom: 2%;
+  }
+
+  .options-list.cd-col-2>li {
+    /* width: 48%; */
+    width: 46%;
+    float: left;
+    margin-right: 4%;
+  }
+}

@@ -1,0 +1,36 @@
+.color-list {
+  position: relative;
+  margin: 4.5em 0;
+}
+
+.color-list>li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+.color-list>li.selected {
+  position: relative;
+  opacity: 1;
+}
+
+.color-list>li img {
+  display: block;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .color-list {
+    margin: 0 0 2em;
+  }
+}
+
+@media only screen and (min-width: 1480px) and (min-height: 850px) {
+  .color-list {
+    margin-bottom: 4em;
+  }
+}
